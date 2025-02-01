@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "gateway-core",
+    "auth",
+    "rate-limiter",
+    "config"
+]
+resolver = "2"

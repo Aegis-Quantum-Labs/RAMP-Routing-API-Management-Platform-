@@ -1,0 +1,14 @@
+listen_address: "0.0.0.0:8080"
+jwt_secret: "supersecretkey123"
+default_rate_limit: 100
+routes:
+  - path: "/api/v1/users"
+    target: "http://user-service:8001"
+    methods: ["GET", "POST"]
+    auth_required: true
+    rate_limit: 50
+    
+  - path: "/api/v1/products"
+    target: "http://product-service:8002"
+    methods: ["GET"]
+    auth_required: false
